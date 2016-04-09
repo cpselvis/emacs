@@ -41,8 +41,7 @@
   | C-/                 | Undo                      |
   
   
-- Search
-  
+- Search  
   
   | ShortCut Key        | Meannings                 |
   | ------------------- |:------------------------: |
@@ -59,3 +58,23 @@
   | C-x 2               | Seperate Horizontal       |
   | C-x 3               | Seperate Vertical         |
   | C-x o               | Switch To Other Window    |
+
+- Other
+ 
+  | ShortCut Key        | Meannings                 |
+  | M-x eval-buffer     | Refresh When Change .emacs|
+  
+  
+### EMACS Configuration
+
+- Package Management Archives
+Choose marmalade and melpa as package manage tool, After add their source to .emacs, Just use commands: M-x list-package-lists to find what you need, input i, then input x and enter, the package will be installed to ~/.emacs.d directory.
+
+
+- Color Theme
+  - Download url: [color-theme-6.6.0.tar.gz](http://ftp.twaren.net/Unix/NonGNU/color-theme/color-theme-6.6.0.tar.gz)
+  - Commands: M-x color-theme-select, Use return to preview.
+  
+- Markdown-mode
+  - Download url: [Markdown](https://github.com/jrblevin/markdown-mode)
+  - Install markdown parser: pandoc (brew install pandoc)
