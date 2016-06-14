@@ -1,4 +1,4 @@
-### EMACS Basic Operate Commands
+## EMACS Basic Operate Commands
 
 - Move Cursor
 
@@ -62,10 +62,11 @@
 - Other
  
   | ShortCut Key        | Meannings                 |
+  | ------------------  |:------------------------: |
   | M-x eval-buffer     | Refresh When Change .emacs|
   
   
-### EMACS Configuration
+## EMACS Configuration
 
 - Package Management Archives
 Choose marmalade and melpa as package manage tool, After add their source to .emacs, Just use commands: M-x list-package-lists to find what you need, input i, then input x and enter, the package will be installed to ~/.emacs.d directory.
@@ -76,5 +77,30 @@ Choose marmalade and melpa as package manage tool, After add their source to .em
   - Commands: M-x color-theme-select, Use return to preview.
   
 - Markdown-mode
-  - Download url: [Markdown](https://github.com/jrblevin/markdown-mode)
+  - GitHub repo: [Markdown](https://github.com/jrblevin/markdown-mode)
   - Install markdown parser: pandoc (brew install pandoc)
+
+- Haskell-mode
+  - GitHub repo: [haskell-mode](https://github.com/haskell/haskell-mode)
+  - Install through source code
+    - `git clone https://github.com/haskell/haskell-mode.git` into a
+	  suitable directory, e.g. `~/.emacs.d/lib/haskell-mode/` where `~`
+	    stands for your home directory.
+		
+    - Assuming you have unpacked the various haskell-mode modules
+		  (`haskell-mode.el` and the rest) in the directory
+		    `~/.emacs.d/lib/haskell-mode/`, you need to generate various files, the
+			  autoloads file (`haskell-mode-autoloads.el`) is one among
+			    them. Invoke:
+				
+				```bash
+				make EMACS=/path/to/your/emacs (e.g. make EMACS=/usr/local/bin/emacs)
+				```
+				
+				  and then adding the following command to your `.emacs`:
+				  
+				  ```el
+				  (add-to-list 'load-path "~/.emacs.d/lib/haskell-mode/")
+				  (require 'haskell-mode-autoloads)
+				  (add-to-list 'Info-default-directory-list "~/.emacs.d/lib/haskell-mode/")
+				  ```

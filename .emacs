@@ -1,6 +1,7 @@
 ;; Emacs package management archives
 ;; Commands: M-x package-list-packages
 (require 'package)
+
 (add-to-list 'package-archives'
 	     ("elpa" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives'
@@ -11,6 +12,8 @@
 
 ;; Load path
 (add-to-list 'load-path "/Users/hellfire/.emacs.d/")
+
+(setq scheme-program-name "mit-scheme")
 
 ;; Color theme
 (require 'color-theme)
@@ -26,6 +29,10 @@
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+(add-to-list 'load-path "~/.emacs.d/lib/haskell-mode/")
+(require 'haskell-mode-autoloads)
+(add-to-list 'Info-default-directory-list "~/.emacs.d/lib/haskell-mode/")
 
 ;; Select color theme
 (color-theme-calm-forest)
