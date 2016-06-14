@@ -79,7 +79,8 @@ Choose marmalade and melpa as package manage tool, After add their source to .em
 - Markdown-mode
   - GitHub repo: [Markdown](https://github.com/jrblevin/markdown-mode)
   - Install markdown parser: pandoc (brew install pandoc)
-
+  - C-c C-c p to view on bowser. 
+  
 - Haskell-mode
   - GitHub repo: [haskell-mode](https://github.com/haskell/haskell-mode)
   - Install through source code
@@ -94,13 +95,13 @@ Choose marmalade and melpa as package manage tool, After add their source to .em
 			    them. Invoke:
 				
 				```bash
-				make EMACS=/path/to/your/emacs (e.g. make EMACS=/usr/local/bin/emacs)
+					make EMACS=/path/to/your/emacs (e.g. make EMACS=/usr/local/bin/emacs)
 				```
 				
-				  and then adding the following command to your `.emacs`:
+			and then adding the following command to your `.emacs`:
 				  
-				  ```el
-				  (add-to-list 'load-path "~/.emacs.d/lib/haskell-mode/")
-				  (require 'haskell-mode-autoloads)
-				  (add-to-list 'Info-default-directory-list "~/.emacs.d/lib/haskell-mode/")
-				  ```
+			    ```el
+					(add-to-list 'load-path "~/.emacs.d/lib/haskell-mode/")
+					(require 'haskell-mode-autoloads)
+					(add-to-list 'Info-default-directory-list "~/.emacs.d/lib/haskell-mode/")
+				```
