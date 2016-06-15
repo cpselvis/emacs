@@ -42,6 +42,10 @@
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
+;;; Neo tree (folder, file tree view)
+(add-to-list 'load-path "~/.emacs.d/lib/neotree/")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
 ;; Select color theme
 (color-theme-calm-forest)

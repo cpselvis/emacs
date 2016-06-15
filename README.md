@@ -75,7 +75,17 @@ Choose marmalade and melpa as package manage tool, After add their source to .em
 - Color Theme
   - Download url: [color-theme-6.6.0.tar.gz](http://ftp.twaren.net/Unix/NonGNU/color-theme/color-theme-6.6.0.tar.gz)
   - Commands: M-x color-theme-select, Use return to preview.
+
+- Neo tree(folder, file tree view)
+  - Github repo: [Neo tree](https://github.com/jaypei/emacs-neotree)
+  - Add following command to your command `.emacs`
   
+  ```el
+  (add-to-list 'load-path "~/.emacs.d/lib/neotree/")
+  (require 'neotree)
+  (global-set-key [f8] 'neotree-toggle)
+  ```
+
 - Markdown-mode
   - GitHub repo: [Markdown](https://github.com/jrblevin/markdown-mode)
   - Install markdown parser: pandoc (brew install pandoc)
