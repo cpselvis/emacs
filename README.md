@@ -100,7 +100,8 @@ Choose marmalade and melpa as package manage tool, After add their source to .em
 - Lua-mode
   - Github repo: [lua-mode](https://github.com/immerrr/lua-mode/)
   - Installation method is the same as before, clone the repository and then add the following command to your `.emacs`
-    ```bash
+    
+	```bash
 	(add-to-list 'load-path "~/.emacs.d/lib/lua-mode/")	
 	(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 	(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
