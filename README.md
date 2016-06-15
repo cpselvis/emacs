@@ -84,24 +84,25 @@ Choose marmalade and melpa as package manage tool, After add their source to .em
 - Haskell-mode
   - GitHub repo: [haskell-mode](https://github.com/haskell/haskell-mode)
   - Install through source code
-    - `git clone https://github.com/haskell/haskell-mode.git` into a
-	  suitable directory, e.g. `~/.emacs.d/lib/haskell-mode/` where `~`
-	    stands for your home directory.
+    - `git clone https://github.com/haskell/haskell-mode.git` into a suitable directory, e.g. `~/.emacs.d/lib/haskell-mode/` where `~` stands for your home directory.
 		
-    - Assuming you have unpacked the various haskell-mode modules
-		  (`haskell-mode.el` and the rest) in the directory
-		    `~/.emacs.d/lib/haskell-mode/`, you need to generate various files, the
-			  autoloads file (`haskell-mode-autoloads.el`) is one among
-			    them. Invoke:
-				
-				```bash
-					make EMACS=/path/to/your/emacs (e.g. make EMACS=/usr/local/bin/emacs)
-				```
-				
-			and then adding the following command to your `.emacs`:
-				  
-			    ```el
-					(add-to-list 'load-path "~/.emacs.d/lib/haskell-mode/")
-					(require 'haskell-mode-autoloads)
-					(add-to-list 'Info-default-directory-list "~/.emacs.d/lib/haskell-mode/")
-				```
+    - Assuming you have unpacked the various haskell-mode modules (`haskell-mode.el` and the rest) in the directory `~/.emacs.d/lib/haskell-mode/`, you need to generate various files, the autoloads file (`haskell-mode-autoloads.el`) is one among them. Invoke:
+	  
+	  ```bash
+	  make EMACS=/path/to/your/emacs (e.g. make EMACS=/usr/local/bin/emacs)
+	  ```
+	  and then adding the following command to your `.emacs`:
+	  ```el
+	  (add-to-list 'load-path "~/.emacs.d/lib/haskell-mode/")
+	  (require 'haskell-mode-autoloads)
+	  (add-to-list 'Info-default-directory-list "~/.emacs.d/lib/haskell-mode/")
+	  ```
+- Lua-mode
+  - Github repo: [lua-mode](https://github.com/immerrr/lua-mode/)
+  - Installation method is the same as before, clone the repository and then add the following command to your `.emacs`
+    ```bash
+	(add-to-list 'load-path "~/.emacs.d/lib/lua-mode/")	
+	(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+	(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+	(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+	```

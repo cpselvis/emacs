@@ -30,9 +30,18 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+;;; Haskell mode
 (add-to-list 'load-path "~/.emacs.d/lib/haskell-mode/")
 (require 'haskell-mode-autoloads)
 (add-to-list 'Info-default-directory-list "~/.emacs.d/lib/haskell-mode/")
+
+;;; Lua mode
+;; This line is not necessary, if lua-mode.el is already on your load-path
+(add-to-list 'load-path "~/.emacs.d/lib/lua-mode/")
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
 
 ;; Select color theme
 (color-theme-calm-forest)
