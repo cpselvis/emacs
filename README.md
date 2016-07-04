@@ -64,7 +64,7 @@
   | ShortCut Key        | Meannings                 |
   | ------------------  |:------------------------: |
   | M-x eval-buffer     | Refresh When Change .emacs|
-  
+  | M-x global-linum-mode| Toggle show line number  |  
   
 ## EMACS Configuration
 
